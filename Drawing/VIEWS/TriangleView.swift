@@ -56,10 +56,10 @@ struct Arc: Shape, InsettableShape {
 
 struct TriangleView: View {
     // MARK: - DATA Content
-    
+    @State private var onScreen = false
     // init Class here :
     
-    
+    // MARK: - someVIEW
     var body: some View {
         
         ZStack {
@@ -94,13 +94,33 @@ struct TriangleView: View {
             Arc(startAngle: .degrees(-90), endAngle: .degrees(90), clockWise: true, insetAmount: 50.0)
                 .strokeBorder(.red, lineWidth: 30)
                 .offset(y:360)
-         
+           
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.indigo)
+                    .shadow(radius: 50)
+                // when testing Link only works when Previews is on StartView
+                NavigationLink("drawing flowers", destination: {
+                    FlowerView()
+                })
+                .foregroundColor(onScreen ? .white : .clear)
+                .animation(.easeInOut(duration: 1.8), value: onScreen)
+                
+            } // end nav link stack
+            .frame(width: 100, height: 80)
+            .offset(y: onScreen ? 280 : 600)
+            // notice the Link wont budge
+            .animation(.easeOut(duration: 1.8), value: onScreen)
+            
         }
         .navigationTitle("Triangles and Arcs")
         .navigationBarTitleDisplayMode(.inline)
-        
+        .onAppear {
+            onScreen = true
+        }
         
     } // end body some view THEN
+        
 
     /* ************************************************************* */
     /*                                                               */

@@ -27,6 +27,10 @@ struct StartApp: View {
                 })
                 .foregroundColor(.white)
                 .font(.largeTitle)
+                //.padding([.horizontal, .vertical])
+                .frame(width: 380, height: 250)
+                .border(.black, width: 50)
+                
                 .offset(x: centre, y: -100)
                 .animation(.easeIn(duration: 1.6), value: centre)
                 
