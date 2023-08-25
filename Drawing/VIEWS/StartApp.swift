@@ -14,26 +14,72 @@ struct StartApp: View {
     // MARK: - DATA Content
     @State private var centre : Double = 400
     
+    let gradient = LinearGradient(colors: [Color.indigo ,Color.black],
+                                  startPoint: .top, endPoint: .bottom)
+    
     var body: some View {
     
         NavigationStack {
+            
             ZStack {
-                Color.gray
-                    .ignoresSafeArea()
-                    .opacity(0.7)
+                gradient
+                .opacity(0.45)
+                .ignoresSafeArea()
                 
-                NavigationLink("Simple Beginnings", destination: {
-                    TriangleView()
-                })
-                .foregroundColor(.white)
-                .font(.largeTitle)
-                //.padding([.horizontal, .vertical])
-                .frame(width: 380, height: 250)
-                .border(ImagePaint(image: Image("brok_grey_9"), scale: 3.0), width: 50)
+                VStack {
+                    // BIG MOUNTAIN customised NavStack example
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(height: 10)
+                        .background(LinearGradient(colors: [.black.opacity(0.3), .blue.opacity(0.5)],
+                                                   startPoint: .topLeading, endPoint: .bottomTrailing)
+                        )
+                    
+                    
+                    // spacer pushes it into top safeArea
+                    Spacer()
+                    
+                    Text(".stroke with ImagePaint and customised NavStack")
+                        .foregroundColor(.gray)
+                        .padding()
+                }
+                VStack {
+                    Text("@yannemal - 100DaysOfSwiftUI - ")
+                        .padding()
+                    
+                    NavigationLink("Simple Beginnings", destination: {
+                        TriangleView()
+                    })
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    //.padding([.horizontal, .vertical])
+                    .frame(width: 380, height: 250)
+                    .border(ImagePaint(image: Image("brok_grey_9"), scale: 3.0), width: 50)
+                    
+                    .offset(x: centre, y: -100)
+                    .animation(.easeIn(duration: 1.6), value: centre)
                 
-                .offset(x: centre, y: -100)
-                .animation(.easeIn(duration: 1.6), value: centre)
-                
+                    HStack {
+                        
+                       Spacer()
+                        NavigationLink("▲") {
+                            TriangleView()
+                        }
+                        .foregroundColor(.white)
+                        .font(.system(size: 70))
+                       
+                        NavigationLink("⚘") {
+                            FlowerView()
+                            }
+                        .foregroundColor(.white)
+                            .font(.system(size: 80))
+                        NavigationLink("🔘") {
+                            ColorCycle()
+                        }
+                        .font(.system(size: 60))
+                        
+                    }
+                }
                 
                 .navigationTitle("Day 43")
             } // end ZStack

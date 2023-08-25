@@ -38,14 +38,29 @@ struct FlowerView: View {
     @State private var petalOffset = -20.0
     @State private var petalWidth = 100.0
     
+    let gradient = LinearGradient(colors: [Color.indigo ,Color.black],
+                                  startPoint: .top, endPoint: .bottom)
     
     var body: some View {
         
         ZStack {
-            Color.gray
-                .ignoresSafeArea()
-                .opacity(0.7)
-           
+            gradient
+            .opacity(0.45)
+            .ignoresSafeArea()
+            VStack {
+                // BIG MOUNTAIN customised NavStack example
+                Rectangle()
+                    .fill(Color.clear)
+                    .frame(height: 10)
+                    .background(LinearGradient(colors: [.black.opacity(0.3), .blue.opacity(0.5)],
+                                               startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                
+                Text("CGAffineTransform used in a path")
+                    .padding()
+                // spacer pushes it into top safeArea
+                Spacer()
+            }
             VStack {
                 Flower(petalOffset: petalOffset, petalWidth: petalWidth)
                     .fill(.orange, style: FillStyle(eoFill: true))

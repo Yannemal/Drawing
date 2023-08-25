@@ -57,16 +57,33 @@ struct Arc: Shape, InsettableShape {
 struct TriangleView: View {
     // MARK: - DATA Content
     @State private var onScreen = false
+    
+    let gradient = LinearGradient(colors: [Color.indigo ,Color.black],
+                                  startPoint: .top, endPoint: .bottom)
     // init Class here :
     
     // MARK: - someVIEW
     var body: some View {
         
         ZStack {
-            Color.gray
-                .ignoresSafeArea()
-                .opacity(0.7)
+            gradient
+            .opacity(0.45)
+            .ignoresSafeArea()
             
+            VStack {
+                // BIG MOUNTAIN customised NavStack example
+                Rectangle()
+                    .fill(Color.clear)
+                    .frame(height: 10)
+                    .background(LinearGradient(colors: [.black.opacity(0.3), .blue.opacity(0.5)],
+                                               startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                
+                Text("drawing Paths, drawing Arcs in SwiftUI")
+                    .padding()
+                // spacer pushes it into top safeArea
+                Spacer()
+            }
             Path { path in
                 path.move(to: CGPoint(x: 200, y: 100))
                 path.addLine(to: CGPoint(x: 100, y: 300))
@@ -96,6 +113,7 @@ struct TriangleView: View {
                 .offset(y:360)
            
             ZStack {
+                
                 Rectangle()
                     .foregroundColor(.indigo)
                     .shadow(radius: 50)
