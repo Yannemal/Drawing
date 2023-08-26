@@ -60,7 +60,7 @@ struct StartApp: View {
                     .animation(.easeIn(duration: 1.6), value: centre)
                 
                     HStack {
-                        
+                        // mini menu to go directly to pages
                        Spacer()
                         NavigationLink("▲") {
                             TriangleView()
@@ -73,11 +73,22 @@ struct StartApp: View {
                             }
                         .foregroundColor(.white)
                             .font(.system(size: 80))
+                        
                         NavigationLink("🔘") {
                             ColorCycle()
                         }
                         .font(.system(size: 60))
                         
+                        NavigationLink("🔲") {
+                            ImagePainted()
+                        }
+                        .font(.system(size: 60))
+                        
+                        NavigationLink("🪿") {
+                            importedPaths()
+                        }
+                        .font(.system(size: 60))
+                        .shadow(radius: 5.0)
                     }
                 }
                 

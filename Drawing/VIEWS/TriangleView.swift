@@ -84,6 +84,7 @@ struct TriangleView: View {
                 // spacer pushes it into top safeArea
                 Spacer()
             }
+            
             Path { path in
                 path.move(to: CGPoint(x: 200, y: 100))
                 path.addLine(to: CGPoint(x: 100, y: 300))

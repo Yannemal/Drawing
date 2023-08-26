@@ -14,6 +14,8 @@
 		7C07F0D82A95CBF600AE9E16 /* StartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F0D72A95CBF600AE9E16 /* StartApp.swift */; };
 		7C07F0DA2A95D9EA00AE9E16 /* FlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07F0D92A95D9EA00AE9E16 /* FlowerView.swift */; };
 		7C56E23B2A9870DF009A16F4 /* ColorCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56E23A2A9870DF009A16F4 /* ColorCycle.swift */; };
+		7CD861402A99ADE1005A26F3 /* ImagePainted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8613F2A99ADE1005A26F3 /* ImagePainted.swift */; };
+		7CD861422A99CC0E005A26F3 /* importedPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD861412A99CC0E005A26F3 /* importedPaths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		7C07F0D72A95CBF600AE9E16 /* StartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartApp.swift; sourceTree = "<group>"; };
 		7C07F0D92A95D9EA00AE9E16 /* FlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerView.swift; sourceTree = "<group>"; };
 		7C56E23A2A9870DF009A16F4 /* ColorCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCycle.swift; sourceTree = "<group>"; };
+		7CD8613F2A99ADE1005A26F3 /* ImagePainted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePainted.swift; sourceTree = "<group>"; };
+		7CD861412A99CC0E005A26F3 /* importedPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importedPaths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				7C07F0D52A95CB8800AE9E16 /* TriangleView.swift */,
 				7C07F0D92A95D9EA00AE9E16 /* FlowerView.swift */,
 				7C56E23A2A9870DF009A16F4 /* ColorCycle.swift */,
+				7CD8613F2A99ADE1005A26F3 /* ImagePainted.swift */,
+				7CD861412A99CC0E005A26F3 /* importedPaths.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -154,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD861422A99CC0E005A26F3 /* importedPaths.swift in Sources */,
 				7C07F0D82A95CBF600AE9E16 /* StartApp.swift in Sources */,
 				7C07F0DA2A95D9EA00AE9E16 /* FlowerView.swift in Sources */,
 				7C07F0D62A95CB8800AE9E16 /* TriangleView.swift in Sources */,
+				7CD861402A99ADE1005A26F3 /* ImagePainted.swift in Sources */,
 				7C07F0C72A946E0300AE9E16 /* DrawingApp.swift in Sources */,
 				7C56E23B2A9870DF009A16F4 /* ColorCycle.swift in Sources */,
 			);
