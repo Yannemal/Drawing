@@ -20,6 +20,7 @@
 		7CD861462A9B6464005A26F3 /* Trapezoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD861452A9B6464005A26F3 /* Trapezoid.swift */; };
 		7CD861482A9B76F4005A26F3 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD861472A9B76F4005A26F3 /* Board.swift */; };
 		7CFFE47B2A9CA4BB006CCF43 /* Spiro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFFE47A2A9CA4BB006CCF43 /* Spiro.swift */; };
+		7CFFE47D2A9F01F6006CCF43 /* SpiroTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFFE47C2A9F01F6006CCF43 /* SpiroTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		7CD861452A9B6464005A26F3 /* Trapezoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezoid.swift; sourceTree = "<group>"; };
 		7CD861472A9B76F4005A26F3 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		7CFFE47A2A9CA4BB006CCF43 /* Spiro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiro.swift; sourceTree = "<group>"; };
+		7CFFE47C2A9F01F6006CCF43 /* SpiroTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiroTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				7CD861452A9B6464005A26F3 /* Trapezoid.swift */,
 				7CD861472A9B76F4005A26F3 /* Board.swift */,
 				7CFFE47A2A9CA4BB006CCF43 /* Spiro.swift */,
+				7CFFE47C2A9F01F6006CCF43 /* SpiroTwo.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFFE47D2A9F01F6006CCF43 /* SpiroTwo.swift in Sources */,
 				7CD861442A9A2A43005A26F3 /* Blurred.swift in Sources */,
 				7CFFE47B2A9CA4BB006CCF43 /* Spiro.swift in Sources */,
 				7CD861422A99CC0E005A26F3 /* ImportedPaths.swift in Sources */,

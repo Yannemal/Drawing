@@ -69,11 +69,18 @@ struct Spiro: View {
     // MARK: - someView:
         
         VStack(spacing: 0) {
+            NavigationLink("꩜2") {
+                SpiroTwo()
+            }
+            .foregroundColor(.white)
+            .font(.system(size: 60))
+            .shadow(radius: 10.0)
+        }
             Spacer()
             
             Spirograph(innerRadius: Int(innerRadius), outerRadius: Int(outerRadius), distance: Int(distance), amount: amount)
-                .stroke(Color(hue: hue, saturation: 1, brightness: 1), lineWidth: 1)
-                .frame(width: 300, height: 300)
+                .stroke(Color(hue: hue, saturation: 1, brightness: 0.5), lineWidth: 2)
+                .frame(width: 200, height: 200)
             
             Spacer()
             // push it up a little bit
@@ -101,7 +108,7 @@ struct Spiro: View {
 
                 
             }
-        }
+        
         
     } // end someView
     
