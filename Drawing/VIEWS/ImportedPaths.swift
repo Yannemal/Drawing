@@ -69,7 +69,7 @@ struct ImportedPaths: View {
                 // .stroke(lineWidth: 1)
                  // trim must be used first.
                 .trim(from: drawingErasing ? 0 : 1, to: 1)
-
+                // this is key to animating ⬆️
                 .offset(x: 170, y: 180)
                 .scale(2.0, anchor: .center)
                 // .foregroundColor(.red)

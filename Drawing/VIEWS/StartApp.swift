@@ -97,7 +97,7 @@ struct StartApp: View {
                             
                      
                             
-                            VStack { // two rows
+                            VStack { // two rows w icons
                                 
                                 HStack {
                                 // mini menu to go directly to pages
